@@ -1,0 +1,24 @@
+<h1 align="center">  Ajouter une equipe</h1>
+
+<form #myform="ngForm" (ngSubmit)="createEquipe(myform)" *ngIf="!submit"> 
+    <div class="form-group">
+      <label for="exampleInputEmail1">Identifiant</label>
+      <input ngModel  name="iden" type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Entrer id">
+      
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Name</label>
+      <input ngModel name="name" type="text" class="form-control" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">country</label>
+        <input ngModel name="country" type="text" class="form-control"  placeholder="Country">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <button *ngIf="submit" class="btn btn-success">Insertion avec succes</button>
